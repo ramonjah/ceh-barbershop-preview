@@ -103,7 +103,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 /* Charcoal concrete controls against a white-to-gray background. */
 :root{--bg:#e6e7e7;--surface:#fff;--line:#cbd0cb}
 body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-height:100vh}
-.booking,.booking:hover,.messenger,.messenger:hover,.route,.route:hover,.install-card #install-action{background-color:#4f5251;background-image:url("assets/concrete-grain.svg"),linear-gradient(135deg,#606461,#444746);background-size:180px 180px,100% 100%;color:#f6f7f5;border-color:#383d39}
+.booking,.booking:hover,.route,.route:hover,.install-card #install-action{background-color:#4f5251;background-image:url("assets/concrete-grain.svg"),linear-gradient(135deg,#606461,#444746);background-size:180px 180px,100% 100%;color:#f6f7f5;border-color:#383d39}
 .booking{box-shadow:inset 0 2px 0 #c7cdc580,inset 0 7px 0 #858989,inset 7px 0 0 #717676,inset -7px 0 0 #414646,inset 0 -10px 0 #343a3a,0 6px 0 #292e2e,0 10px 0 1px #292e2e18,0 14px 20px #252b2526}
 .booking:hover{box-shadow:inset 0 2px 0 #d0d3ce80,inset 0 7px 0 #898d8d,inset 7px 0 0 #747979,inset -7px 0 0 #414646,inset 0 -10px 0 #343a3a,0 7px 0 #292e2e,0 15px 22px #252b2530}
 .booking:active{box-shadow:inset 0 2px 0 #c7cdc560,inset 0 7px 0 #798080,inset 7px 0 0 #687171,inset -7px 0 0 #414646,inset 0 -10px 0 #343a3a,0 2px 0 #292e2e,0 6px 10px #252b2525}
@@ -111,9 +111,9 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .booking strong{color:#fafbf9;text-shadow:0 -1px 0 #272c27,0 -2px 2px #20252085,0 1px 0 #ffffff45}
 .booking-caption{color:#d9ddd6}
 @keyframes caption-glow{0%,100%{opacity:.75;color:#d9ddd6;text-shadow:0 0 3px #eff4ec20}50%{opacity:.4;color:#c1c8bb;text-shadow:none}}
-.messenger,.route{box-shadow:inset 0 1px 0 #ffffff40,inset 0 -1px 0 #22282270,0 2px 0 #303730,0 5px 12px #252b2518;transition:transform .18s,box-shadow .18s}
-.messenger svg,.route-arrow{color:#e0e7d7}
-.messenger:active,.route:active{transform:translateY(1px);box-shadow:inset 0 1px 3px #1c221c50,0 1px 0 #303730}
+.route{box-shadow:inset 0 1px 0 #ffffff40,inset 0 -1px 0 #22282270,0 2px 0 #303730,0 5px 12px #252b2518;transition:transform .18s,box-shadow .18s}
+.route-arrow{color:#e0e7d7}
+.route:active{transform:translateY(1px);box-shadow:inset 0 1px 3px #1c221c50,0 1px 0 #303730}
 .route{padding:14px 16px;border:1px solid #383d39;border-radius:6px}
 .install-card #install-action{box-shadow:inset 0 1px 0 #ffffff30,0 2px 0 #303730}
 
