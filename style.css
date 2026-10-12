@@ -128,14 +128,14 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .contact-links .call{margin-top:0}
 @media(max-width:700px){.contact-links{margin-top:38px;padding-top:14px}}
 
-/* Monochrome editorial portrait behind the olive brand. */
-.hero-editorial{position:relative;isolation:isolate;height:420px;padding:0;margin:18px 0 32px;overflow:hidden}
-.hero-editorial:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 65% 45%,#d6dad180,transparent 64%);z-index:-1;pointer-events:none}
-.hero-portrait{position:absolute;width:365px;right:12%;top:0;pointer-events:none;mask-image:linear-gradient(#000 0%,#000 60%,transparent 90%);-webkit-mask-image:linear-gradient(#000 0%,#000 60%,transparent 90%)}
+/* Compact centered portrait with the logo layered over the lower torso. */
+.hero-editorial{position:relative;isolation:isolate;height:350px;padding:0;margin:16px 0 26px;overflow:hidden}
+.hero-editorial:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#d6dad165,transparent 58%);z-index:-1;pointer-events:none}
+.hero-portrait{position:absolute;width:310px;left:50%;top:0;transform:translateX(-50%);pointer-events:none;mask-image:linear-gradient(#000 0%,#000 64%,transparent 98%);-webkit-mask-image:linear-gradient(#000 0%,#000 64%,transparent 98%)}
 .hero-portrait img{display:block;width:100%;height:auto;animation:portrait-drift 12s ease-in-out infinite;transform-origin:50% 40%;filter:contrast(.92)}
-.hero-editorial .hero-brand{position:absolute;z-index:2;width:460px;max-width:none;left:6%;bottom:34px;margin:0;animation:none}
-.hero-editorial .hero-brand:before{content:"";position:absolute;z-index:-1;inset:12% -5% -12%;background:radial-gradient(ellipse,#fff 18%,#ffffffe8 42%,#ffffff00 72%);pointer-events:none}
-@keyframes portrait-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-3px,-4px,0) scale(1.018)}}
-@media(max-width:700px){.hero-editorial{height:354px;margin:18px -10px 28px}.hero-portrait{width:295px;right:-4px;top:0}.hero-editorial .hero-brand{width:330px;left:-37px;bottom:4px}.hero-editorial .hero-brand:before{inset:7% -5% -16%}}
-@media(max-width:360px){.hero-editorial{height:330px}.hero-portrait{width:270px;right:-5px}.hero-editorial .hero-brand{width:305px;left:-34px}}
+.hero-editorial .hero-brand{position:absolute;z-index:2;width:340px;max-width:none;left:50%;bottom:0;transform:translateX(-50%);margin:0;animation:none}
+.hero-editorial .hero-brand:before{content:"";position:absolute;z-index:-1;inset:5% -8% -12%;background:radial-gradient(ellipse,#fff 20%,#ffffffe8 45%,#ffffff00 74%);pointer-events:none}
+@keyframes portrait-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-3px,0) scale(1.015)}}
+@media(max-width:700px){.hero-editorial{height:320px;margin:14px -10px 22px}.hero-portrait{width:280px}.hero-editorial .hero-brand{width:310px}}
+@media(max-width:360px){.hero-editorial{height:300px}.hero-portrait{width:260px}.hero-editorial .hero-brand{width:290px}}
 @media(prefers-reduced-motion:reduce){.hero-portrait img{animation:none}}
