@@ -84,8 +84,6 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .booking>.barber-pole-right{left:auto;right:8px}
 .barber-pole:before{width:1px;box-shadow:1px 0 3px #352d2520}
 .barber-pole-right:before{right:auto;left:0;border-left:0;border-right:1px solid #fff8;box-shadow:-1px 0 3px #352d2520}
-.booking>.booking-online{position:absolute;z-index:3;right:26px;top:13px;display:flex;align-items:center;gap:5px;width:auto;margin:0;font:7px/1 monospace;letter-spacing:.9px;color:#d3dbca;text-shadow:none}
-.booking-online i{width:4px;height:4px;border-radius:50%;background:#bdcdb5;box-shadow:0 0 4px #bdcdb580,0 0 7px #bdcdb530}
 @media(max-width:700px){.booking{padding:31px 30px 23px}.booking strong{font-size:28px}}
 @media(max-width:360px){.booking{padding-left:26px;padding-right:26px}.booking>.barber-pole{width:8px}.booking strong{font-size:24px;letter-spacing:.2px}.booking small{font-size:8px;letter-spacing:.7px}}
 @media(prefers-reduced-motion:reduce){.booking-caption{animation:none;opacity:.75;color:#dce1d5}}
