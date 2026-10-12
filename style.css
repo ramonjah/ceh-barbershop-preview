@@ -124,3 +124,9 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .booking .barber-pole:before{inset:0;width:auto;border:0;background:linear-gradient(90deg,#1b252950,transparent 30%,transparent 70%,#1b252940);box-shadow:inset 0 4px 4px -2px #171d1dcc,inset 0 -4px 4px -2px #171d1dcc;z-index:2}
 .booking .barber-pole:after{inset:2px 1px;opacity:.45;background-image:repeating-linear-gradient(0deg,#eeeede80 0 1px,transparent 1px 4px),repeating-linear-gradient(0deg,#eeeede65 0 1px,transparent 1px 4px);background-size:1px 100%,1px 100%;background-position:left top,right top;background-repeat:no-repeat;z-index:3}
 @media(max-width:360px){.booking>.barber-pole{width:8px;left:10px}.booking>.barber-pole-right{left:auto;right:10px}}
+
+/* A single woven ribbon follows the exact width of the booking title. */
+.booking-heading{display:inline-flex;flex-direction:column;align-items:stretch;width:max-content;max-width:100%;gap:11px;vertical-align:top}
+.booking .booking-heading>.barber-pole{display:block;position:relative;inset:auto;width:100%;height:8px;flex:none;margin:0;overflow:hidden;border:0;border-radius:2px;background:#303431;box-shadow:0 0 0 1px #262b2980,0 1px 0 #ffffff20;isolation:isolate}
+.booking .booking-heading>.barber-pole:before{background:linear-gradient(180deg,#1b252960,transparent 40%,transparent 65%,#1b252940);box-shadow:inset 4px 0 4px -2px #171d1daa,inset -4px 0 4px -2px #171d1daa}
+.booking .booking-heading>.barber-pole:after{inset:1px 2px;background-image:repeating-linear-gradient(90deg,#eeeede80 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,#eeeede65 0 1px,transparent 1px 4px);background-size:100% 1px,100% 1px;background-position:left top,left bottom}
