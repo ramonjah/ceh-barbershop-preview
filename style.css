@@ -128,13 +128,12 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .contact-links .call{margin-top:0}
 @media(max-width:700px){.contact-links{margin-top:38px;padding-top:14px}}
 
-/* The portrait has its own space below the booking action. */
-.portrait-panel{position:relative;margin:32px 0 0;padding:10px 0 0;background:radial-gradient(ellipse at 50% 55%,#d9ddd340,transparent 69%)}
+/* The portrait sits between the logo and the booking action. */
+.portrait-panel{position:relative;max-width:460px;margin:0 auto 22px;padding:0;background:radial-gradient(ellipse at 50% 55%,#d9ddd340,transparent 69%)}
 .editorial-portrait{width:270px;max-width:90%;margin:0 auto;pointer-events:none;mask-image:linear-gradient(#000 0%,#000 69%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 69%,transparent 100%)}
 .editorial-portrait img{display:block;width:100%;height:auto;filter:contrast(.92)}
 .portrait-motion{position:relative}
-.portrait-panel+.contact-links{margin-top:16px}
-@media(max-width:700px){.portrait-panel{margin-top:28px;padding-top:4px}.editorial-portrait{width:246px}.portrait-panel+.contact-links{margin-top:14px}}
+@media(max-width:700px){.portrait-panel{margin:0 auto 20px}.editorial-portrait{width:246px}}
 
 /* Chain follows the photographed guide bar while the saw body stays still. */
 .saw-chain-overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;fill:none;stroke:none}
@@ -155,3 +154,7 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .booking>.barber-pole-right{left:auto;right:9px}
 @media(max-width:700px){.booking{min-height:104px;padding:21px 26px 23px}.booking strong{font-size:24px}}
 @media(max-width:360px){.booking strong{font-size:22px}.booking-caption{font-size:8px}}
+
+/* Keep the stacked logo, portrait and booking sequence compact. */
+.hero{padding-bottom:18px}
+@media(max-width:700px){.hero{padding-bottom:14px}}
