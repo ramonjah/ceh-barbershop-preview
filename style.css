@@ -128,18 +128,13 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .contact-links .call{margin-top:0}
 @media(max-width:700px){.contact-links{margin-top:38px;padding-top:14px}}
 
-/* Compact centered portrait with the logo layered over the lower torso. */
-.hero-editorial{position:relative;isolation:isolate;height:350px;padding:0;margin:16px 0 26px;overflow:hidden}
-.hero-editorial:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#d6dad165,transparent 58%);z-index:-1;pointer-events:none}
-.hero-portrait{position:absolute;width:310px;left:50%;top:0;transform:translateX(-50%);pointer-events:none;mask-image:linear-gradient(#000 0%,#000 64%,transparent 98%);-webkit-mask-image:linear-gradient(#000 0%,#000 64%,transparent 98%)}
-.hero-portrait img{display:block;width:100%;height:auto;filter:contrast(.92)}
-.portrait-motion{position:relative;animation:portrait-drift 12s ease-in-out infinite;transform-origin:50% 40%}
-.hero-editorial .hero-brand{position:absolute;z-index:2;width:340px;max-width:none;left:50%;bottom:0;transform:translateX(-50%);margin:0;animation:none}
-.hero-editorial .hero-brand:before{content:"";position:absolute;z-index:-1;inset:5% -8% -12%;background:radial-gradient(ellipse,#fff 20%,#ffffffe8 45%,#ffffff00 74%);pointer-events:none}
-@keyframes portrait-drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-3px,0) scale(1.015)}}
-@media(max-width:700px){.hero-editorial{height:320px;margin:14px -10px 22px}.hero-portrait{width:280px}.hero-editorial .hero-brand{width:310px}}
-@media(max-width:360px){.hero-editorial{height:300px}.hero-portrait{width:260px}.hero-editorial .hero-brand{width:290px}}
-@media(prefers-reduced-motion:reduce){.portrait-motion{animation:none}}
+/* The portrait has its own space below the booking action. */
+.portrait-panel{position:relative;margin:32px 0 0;padding:10px 0 0;background:radial-gradient(ellipse at 50% 55%,#d9ddd340,transparent 69%)}
+.editorial-portrait{width:270px;max-width:90%;margin:0 auto;pointer-events:none;mask-image:linear-gradient(#000 0%,#000 69%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 69%,transparent 100%)}
+.editorial-portrait img{display:block;width:100%;height:auto;filter:contrast(.92)}
+.portrait-motion{position:relative}
+.portrait-panel+.contact-links{margin-top:16px}
+@media(max-width:700px){.portrait-panel{margin-top:28px;padding-top:4px}.editorial-portrait{width:246px}.portrait-panel+.contact-links{margin-top:14px}}
 
 /* Chain follows the photographed guide bar while the saw body stays still. */
 .saw-chain-overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;fill:none;stroke:none}
