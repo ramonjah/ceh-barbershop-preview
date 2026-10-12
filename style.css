@@ -124,3 +124,8 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 .booking .barber-pole:before{inset:0;width:auto;border:0;background:linear-gradient(90deg,#1b252950,transparent 30%,transparent 70%,#1b252940);box-shadow:inset 0 4px 4px -2px #171d1dcc,inset 0 -4px 4px -2px #171d1dcc;z-index:2}
 .booking .barber-pole:after{inset:2px 1px;opacity:.45;background-image:repeating-linear-gradient(0deg,#eeeede80 0 1px,transparent 1px 4px),repeating-linear-gradient(0deg,#eeeede65 0 1px,transparent 1px 4px);background-size:1px 100%,1px 100%;background-position:left top,right top;background-repeat:no-repeat;z-index:3}
 @media(max-width:360px){.booking>.barber-pole{width:8px;left:10px}.booking>.barber-pole-right{left:auto;right:10px}}
+
+/* Separate contact options from the primary booking action. */
+.contact-links{margin-top:44px;padding-top:16px;border-top:1px solid var(--line)}
+.contact-links .call{margin-top:0}
+@media(max-width:700px){.contact-links{margin-top:38px;padding-top:14px}}
