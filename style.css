@@ -242,3 +242,14 @@ footer{max-width:460px;margin:20px auto 0;padding-top:16px;font-size:7px;letter-
 .portrait-motion.portrait-ready{animation:portrait-settle 1.45s cubic-bezier(.16,.7,.22,1) both}
 @keyframes portrait-settle{0%{transform:scale(1.16);opacity:0}18%{opacity:1}100%{transform:scale(1);opacity:1}}
 @media(prefers-reduced-motion:reduce){.portrait-motion.portrait-intro,.portrait-motion.portrait-ready{animation:none;transform:none;opacity:1}}
+
+/* Adapt the official DIKIDI modal into a mobile booking sheet. */
+body [class^="dikidi-"][class$="-modal"]{background:#202722a6;overscroll-behavior:contain}
+body [class^="dikidi-"][class$="-modal"] [class$="-close"]{display:grid;place-items:center;width:40px;height:40px;right:0;top:-48px;border-radius:50%;background:#fff;color:#323a32;font:28px/1 Arial,sans-serif;text-shadow:none;box-shadow:0 3px 14px #10191020}
+body [class^="dikidi-"][class$="-modal"] [class$="-close"]:focus-visible{outline:3px solid #68715b;outline-offset:3px}
+@media(max-width:700px){
+ body [class^="dikidi-"][class$="-modal"] [class$="-dialog"]{width:calc(100% - 24px)!important;height:calc(100vh - 96px - env(safe-area-inset-top))!important;height:calc(100dvh - 96px - env(safe-area-inset-top))!important;margin:calc(76px + env(safe-area-inset-top)) auto 20px;border-radius:14px;box-shadow:0 12px 40px #10191030;animation:booking-sheet-arrive .28s ease-out both}
+ body [class^="dikidi-"][class$="-modal"] [class$="-dialog"] iframe{border-radius:14px}
+}
+@keyframes booking-sheet-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){body [class^="dikidi-"][class$="-modal"] [class$="-dialog"]{animation:none}}
