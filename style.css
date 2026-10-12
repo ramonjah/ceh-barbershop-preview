@@ -158,3 +158,16 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 /* Keep the stacked logo, portrait and booking sequence compact. */
 .hero{padding-bottom:18px}
 @media(max-width:700px){.hero{padding-bottom:14px}}
+
+/* Booking and portrait respond as one composition. */
+.page{--booking-zoom:1.025}
+.booking,.editorial-portrait{transform-origin:center;transition:transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s ease}
+@media(hover:hover) and (pointer:fine){
+ .booking:hover{transform:scale(var(--booking-zoom))}
+ .page:has(.booking:hover) .editorial-portrait{transform:scale(var(--booking-zoom))}
+}
+.booking:active,.booking:focus-visible{transform:scale(var(--booking-zoom))}
+.page:has(.booking:active) .editorial-portrait,.page:has(.booking:focus-visible) .editorial-portrait{transform:scale(var(--booking-zoom))}
+@media(prefers-reduced-motion:reduce){
+ .booking:hover,.booking:active,.booking:focus-visible,.page:has(.booking:hover) .editorial-portrait,.page:has(.booking:active) .editorial-portrait,.page:has(.booking:focus-visible) .editorial-portrait{transform:none}
+}
