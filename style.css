@@ -93,7 +93,7 @@ button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 @media(max-width:360px){.station-board{font-size:8px;letter-spacing:.7px}}
 
 /* Neutral gray, white and muted olive with a small raspberry accent. */
-.hero-brand img{filter:saturate(.6) brightness(1.2)}
+.hero-brand img{filter:saturate(.48) contrast(.82) brightness(1.08)}
 .station-board{color:#68715b}
 
 .eyebrow i{background:#a83e60;box-shadow:0 0 0 4px #a83e600c}
