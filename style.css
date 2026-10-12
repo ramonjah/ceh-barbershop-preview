@@ -180,35 +180,30 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 @keyframes scroll-cue-drift{0%,100%{transform:translateY(-2px);opacity:.55}50%{transform:translateY(4px);opacity:1}}
 @media(prefers-reduced-motion:reduce){.scroll-cue svg{animation:none;opacity:.8}}
 
-/* Compact contact panel: pale surfaces, olive details and fine rules. */
-.contact-links{padding:15px;border:1px solid #cbd0c7;border-radius:9px;background:linear-gradient(145deg,#ffffffed,#f0f2ed);box-shadow:inset 0 1px 0 #fff,0 5px 16px #343b3008}
-.contact-links .call{min-height:63px;margin:0;padding:2px 0 13px;gap:11px;border-bottom:1px solid #d9ddd4}
-.contact-links .row-icon{width:32px;height:32px;border-color:#cbd2c2;background:#e8ece2;box-shadow:inset 0 1px 0 #fff9;color:#68715b}
-.contact-links .row-icon svg{width:17px;height:17px}
-.contact-links .call strong{font-size:15px;font-weight:600}
-.contact-links .call small{margin-top:4px;font:11px/1.4 monospace;letter-spacing:.1px;color:#6b7166}
-.contact-links .section-label{margin:14px 0 8px;font-size:8px;letter-spacing:1.3px;color:#747b6c}
-.contact-links .messengers,.contact-links .socials{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
-.contact-links .messenger,.contact-links .socials .row{min-width:0;border:1px solid #d3d8cd;border-radius:5px;background:#ffffffb3;box-shadow:inset 0 1px 0 #fff;transition:background .18s,border-color .18s,transform .18s}
-.contact-links .messenger{justify-content:center;min-height:45px;padding:10px 8px;gap:7px;font-size:12px}
-.contact-links .messenger svg{width:17px;height:17px}
-.contact-links .socials .row{min-height:66px;padding:10px;gap:8px}
-.contact-links .socials .row-icon{width:18px;height:22px;border:0;border-radius:0;background:none;box-shadow:none}
-.contact-links .socials .row-icon svg{width:18px;height:18px}
-.contact-links .socials .vk{font-size:15px}
-.contact-links .socials strong{font-size:12px;font-weight:500}
-.contact-links .socials small{margin-top:5px;font:8px/1.4 monospace;letter-spacing:-.2px;color:#747b6c}
-.contact-links .messenger:hover,.contact-links .socials .row:hover{background:#e8ede2;border-color:#aebaa1}
-.contact-links .call:hover{background:transparent;color:#68715b}
-.contact-links .messenger:active,.contact-links .socials .row:active{transform:translateY(1px)}
-.location{padding:17px;border-radius:9px;background:#e7ebe2;border-color:#cbd0c7;box-shadow:inset 3px 0 #9ba68c}
-.location h2{font-size:21px;margin:13px 0 6px}
-.location p{font-size:11px}
-.location-top svg{width:18px;height:18px}
-.route{margin-top:15px;min-height:44px;padding:11px 13px;font-size:12px}
-.identity-panel{min-height:205px;border-radius:9px;padding:20px}
-.identity-panel p{font-size:40px;margin-top:24px}
-.identity-stripes{width:105px;height:43px;top:25px;right:20px}
-footer{margin-top:24px;padding-top:16px}
-@media(max-width:700px){.place-column{margin-top:12px}.contact-links{padding:14px}.location{padding:16px}.location h2{font-size:20px}}
-@media(max-width:360px){.contact-links{padding:12px}.contact-links .socials .row{gap:6px;padding:9px 7px}.contact-links .socials strong{font-size:11px}.contact-links .socials small{font-size:7px}}
+/* One continuous contact area, without nested cards. */
+.content-grid{display:block;max-width:460px;margin-inline:auto}
+.contact-links{margin-top:17px;padding:0 6px;border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none;scroll-margin-top:24px}
+.contact-links a{transition:color .18s,background .18s}
+.contact-links a:hover{color:var(--olive)}
+.contact-phone,.contact-address{display:flex;align-items:center;gap:15px}
+.contact-phone{min-height:86px;padding:17px 0}
+.contact-links svg{width:20px;height:20px;color:var(--olive);stroke-width:1.5}
+.contact-phone span,.contact-address span{min-width:0}
+.contact-phone small{display:block;margin-bottom:6px;font-size:11px;color:var(--muted)}
+.contact-phone strong{display:block;font-size:21px;line-height:1.25;font-weight:500;letter-spacing:-.5px}
+.contact-socials{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;padding:8px 0 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact-socials a{display:flex;align-items:center;gap:15px;min-height:46px;font-size:14px}
+.contact-vk{display:inline-block;flex-shrink:0;width:20px;text-align:center;color:var(--olive);font-size:17px;font-weight:900;letter-spacing:-2px;padding-right:2px}
+.contact-address{min-height:86px;padding:17px 0}
+.contact-address strong{display:block;font-size:15px;font-weight:500;line-height:1.4}
+.contact-address small{display:block;margin-top:5px;font-size:11px;color:var(--muted)}
+.contact-address .contact-direction{margin-left:auto;width:17px;height:17px}
+.contact-links .install-card{display:flex;flex-wrap:wrap;gap:0;margin:0;padding:0 40px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none;min-height:48px}
+.contact-links .install-card #install-action{display:flex;align-items:center;gap:15px;min-height:48px;margin:0;padding:9px 0;border:0;border-radius:0;background:none;box-shadow:none;color:var(--muted);font-size:11px;text-align:left;line-height:1.4}
+.contact-links .install-card #install-action:hover{color:var(--text)}
+.contact-links .install-card #install-action svg{width:20px;height:20px}
+.contact-links .install-dismiss{top:2px;right:-6px;display:grid;place-items:center;width:44px;height:44px;padding:0}
+.contact-links .install-dismiss svg{width:14px;height:14px;color:var(--muted)}
+#install-help{margin:0;padding:12px 0;font-size:12px;line-height:1.6;color:var(--muted)}
+footer{max-width:460px;margin:20px auto 0;padding-top:16px;font-size:7px;letter-spacing:.5px}
+@media(max-width:360px){.contact-links{padding-inline:3px}.contact-phone strong{font-size:19px}.contact-socials{column-gap:12px}.contact-socials a{font-size:13px}.contact-address strong{font-size:14px}}

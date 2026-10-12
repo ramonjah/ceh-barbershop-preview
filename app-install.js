@@ -10,7 +10,7 @@
   try { dismissed = Date.now() - Number(localStorage.getItem('ceh-install-dismissed') || 0) < 7 * 86400000; } catch {}
   const show = () => { if (!standalone() && !dismissed && (ios || android)) card.hidden = false; };
   window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault(); promptEvent = event; action.textContent = 'Добавить'; show();
+    event.preventDefault(); promptEvent = event; show();
   });
   window.addEventListener('appinstalled', () => { card.hidden = true; promptEvent = null; });
   document.getElementById('install-dismiss').addEventListener('click', () => {
