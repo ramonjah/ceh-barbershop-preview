@@ -171,3 +171,11 @@ body{background:linear-gradient(160deg,#fff 0%,#f4f4f3 42%,#dfe1e0 100%);min-hei
 @media(prefers-reduced-motion:reduce){
  .booking:hover,.booking:active,.booking:focus-visible,.page:has(.booking:hover) .editorial-portrait,.page:has(.booking:active) .editorial-portrait,.page:has(.booking:focus-visible) .editorial-portrait{transform:none}
 }
+
+/* A quiet animated cue leads from booking to contact options. */
+.scroll-cue{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:max-content;min-width:132px;min-height:58px;margin:20px auto 0;padding:6px 12px;color:var(--muted);border-radius:4px;font:8px/1.4 monospace;letter-spacing:1.5px;text-transform:uppercase}
+.scroll-cue svg{width:18px;height:26px;stroke-width:1.3;animation:scroll-cue-drift 2.4s ease-in-out infinite}
+.scroll-cue:hover{color:var(--olive)}
+.scroll-cue+.contact-links{margin-top:17px;scroll-margin-top:24px}
+@keyframes scroll-cue-drift{0%,100%{transform:translateY(-2px);opacity:.55}50%{transform:translateY(4px);opacity:1}}
+@media(prefers-reduced-motion:reduce){.scroll-cue svg{animation:none;opacity:.8}}
