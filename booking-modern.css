@@ -55,16 +55,17 @@ body{font-family:"Manrope",Arial,sans-serif}
 @media(max-width:700px){.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:19px;letter-spacing:.01em}}
 @media(max-width:360px){.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:18px}.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-size:9px}}
 
-/* Flat scissors badge: the two arms make a small, deliberate cut. */
+/* A narrow animated barber pole replaces the circular icon. */
 .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{top:73%}
-.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{flex-basis:44px;width:44px;height:44px;position:relative;overflow:hidden;background:#83bc86;color:#244c30;box-shadow:none}
-.booking--modern .booking-direction svg,.booking--modern:hover .booking-direction svg{position:static;width:31px;height:31px;margin:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:none;transform:none;transition:none}
-.booking-scissors .scissor-arm-a,.booking-scissors .scissor-arm-b{transform-box:view-box;transform-origin:16px 15px}
-.booking-scissors .scissor-arm-a{animation:scissor-cut-a 3.4s ease-in-out infinite}
-.booking-scissors .scissor-arm-b{animation:scissor-cut-b 3.4s ease-in-out infinite}
-.booking-scissors .scissor-pivot{fill:currentColor;stroke:none}
-@keyframes scissor-cut-a{0%,48%,77%,100%{transform:rotate(0deg)}59%,69%{transform:rotate(-12deg)}64%{transform:rotate(-2deg)}}
-@keyframes scissor-cut-b{0%,48%,77%,100%{transform:rotate(0deg)}59%,69%{transform:rotate(12deg)}64%{transform:rotate(2deg)}}
-@media(max-width:700px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{flex-basis:40px;width:40px;height:40px}.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{gap:8px}}
-@media(max-width:360px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{flex-basis:36px;width:36px;height:36px}.booking--modern .booking-direction svg{width:28px;height:28px}}
-@media(prefers-reduced-motion:reduce){.booking-scissors .scissor-arm-a,.booking-scissors .scissor-arm-b{animation:none}}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction.booking-pole{
+ display:block;position:relative;flex:0 0 19px;width:19px;height:48px;overflow:visible;border-radius:0;background:none;color:inherit;box-shadow:none;margin:0 4px 0 5px;
+}
+.booking-pole:before,.booking-pole:after{content:"";position:absolute;z-index:2;left:-2px;right:-2px;height:4px;border-radius:3px;background:linear-gradient(90deg,#8f9994,#e3e7df 40%,#a1aaa4);box-shadow:0 1px 1px #0003}
+.booking-pole:before{top:-2px}.booking-pole:after{bottom:-2px}
+.booking-pole-glass{display:block;position:absolute;inset:0;overflow:hidden;border-radius:7px;border:1px solid #e1e5df70;background:#f2eee5}
+.booking-pole-glass:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#20282236,transparent 28%,#ffffff50 42%,transparent 65%,#20282240);border-radius:inherit}
+.booking-pole-ribbon{position:absolute;inset:-65px 0;background:repeating-linear-gradient(135deg,#f1eee5 0 8px,#b94f60 8px 16px,#f1eee5 16px 24px,#456c83 24px 32px);animation:booking-pole-turn 2.6s linear infinite;will-change:transform}
+@keyframes booking-pole-turn{from{transform:translateY(0)}to{transform:translateY(45.254834px)}}
+@media(max-width:700px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction.booking-pole{flex-basis:17px;width:17px;height:44px}}
+@media(max-width:360px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction.booking-pole{flex-basis:16px;width:16px;height:42px}}
+@media(prefers-reduced-motion:reduce){.booking-pole-ribbon{animation:none}}
