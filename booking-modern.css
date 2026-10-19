@@ -69,3 +69,8 @@ body{font-family:"Manrope",Arial,sans-serif}
 @media(max-width:700px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction.booking-pole{flex-basis:17px;width:17px;height:44px}}
 @media(max-width:360px){.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction.booking-pole{flex-basis:16px;width:16px;height:42px}}
 @media(prefers-reduced-motion:reduce){.booking-pole-ribbon{animation:none}}
+
+/* Logo and booking share the same deep green. */
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{background:#354b3c}
+@media(hover:hover) and (pointer:fine){.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:hover{background:#2b4032}}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:active{background:#24382b}
