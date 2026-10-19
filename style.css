@@ -358,3 +358,6 @@ body [class^="dikidi-"][class$="-modal"] [class$="-close"]:focus-visible{outline
 .photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{max-width:100%;font-size:clamp(9px,2.7cqw,12px);line-height:1.45;margin-top:9px}
 .photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption span{display:block}
 @media(max-width:360px){.photo-booking-round:not(.layout-edit) .portrait-panel .booking{width:48%;aspect-ratio:1.65;padding:12px 10px}.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-size:21px}.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{font-size:9px;margin-top:7px}}
+
+/* Give the booking label a little more space below the portrait's faces. */
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking{top:68%}
