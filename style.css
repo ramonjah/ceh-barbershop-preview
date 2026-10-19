@@ -253,3 +253,101 @@ body [class^="dikidi-"][class$="-modal"] [class$="-close"]:focus-visible{outline
 }
 @keyframes booking-sheet-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){body [class^="dikidi-"][class$="-modal"] [class$="-dialog"]{animation:none}}
+
+/* Local sign-inspired study: green enamel and warm ivory lettering. */
+.hero-brand{max-width:252px}
+.hero-brand img{filter:none}
+@media(max-width:700px){.hero-brand{max-width:228px}}
+
+/* Local study: booking key in the same green as the round sign. */
+.booking,.booking:hover{background:#73b578;border-color:#568c5b;box-shadow:inset 0 1px 0 #ffffff65,inset 0 5px 0 #92c496,inset 5px 0 0 #83bd88,inset -5px 0 0 #619f66,inset 0 -7px 0 #568f5c,0 4px 0 #407449,0 9px 15px #315d3a22}
+.booking:hover{box-shadow:inset 0 1px 0 #ffffff75,inset 0 5px 0 #99c99c,inset 5px 0 0 #89c18d,inset -5px 0 0 #619f66,inset 0 -7px 0 #568f5c,0 5px 0 #407449,0 11px 17px #315d3a28}
+.booking:active{background:#73b578;box-shadow:inset 0 1px 0 #ffffff45,inset 0 5px 0 #87bb8b,inset 5px 0 0 #7bb680,inset -5px 0 0 #619f66,inset 0 -7px 0 #568f5c,0 2px 0 #407449,0 5px 9px #315d3a20}
+.booking:after{border-color:#ffffff35;box-shadow:inset 0 5px 10px -9px #fff9,inset 0 -12px 16px -13px #315d3a70}
+
+/* Flat booking treatment, matching the green and white logo. */
+.booking,.booking:hover,.booking:active{background:#73b578;border:0;border-radius:10px;box-shadow:none}
+.booking:after{display:none}
+.booking strong,.booking:active strong{color:#fff;background:none;-webkit-text-fill-color:#fff;text-shadow:none;filter:none;animation:none}
+.booking-caption{color:#fff;animation:none;opacity:.85}
+.booking>.barber-pole,.booking>.barber-pole-right{box-shadow:none;background:transparent}
+.booking .barber-pole:before,.booking .barber-pole:after{display:none}
+.booking:active{transform:scale(.99)}
+
+/* Local composition study: the badge lives in the existing header. */
+.eyebrow{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:12px;padding-bottom:12px;align-items:center}
+.eyebrow .hero-brand{width:76px;max-width:none;margin:0;animation:none}
+.header-links{justify-self:end;gap:0}
+.header-links a{width:28px}
+.portrait-panel{margin-top:20px}
+@media(max-width:700px){.eyebrow{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:6px;padding-bottom:10px}.eyebrow .hero-brand{width:64px}.header-links a{width:24px}.header-links svg{width:15px;height:15px}.portrait-panel{margin-top:18px}}
+@media(max-width:360px){.eyebrow{grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr);gap:5px}.eyebrow .hero-brand{width:56px}.header-address{font-size:8px}.header-links a{width:22px}.header-links svg{width:14px;height:14px}}
+
+/* Photo and booking form one local hero composition. */
+.brand>.station-board{margin:20px 0 8px;font-size:8px;letter-spacing:1.2px}
+.portrait-panel{margin-top:0;margin-bottom:0;max-width:460px}
+.editorial-portrait{width:360px;max-width:95%}
+.portrait-panel .booking{position:absolute;z-index:2;right:18px;bottom:18px;display:flex;align-items:center;justify-content:center;width:138px;height:138px;min-height:0;padding:15px 10px;margin:0;border-radius:50%;background:#73b578;box-shadow:none;border:0;text-align:center}
+.portrait-panel .booking>span:first-child{width:100%}
+.portrait-panel .booking strong{font-size:16px;letter-spacing:.1px;line-height:1.3;transform:skewX(-8deg)}
+.portrait-panel .booking-caption{max-width:104px;margin:8px auto 0;font:8px/1.5 monospace;letter-spacing:0;opacity:.9;color:#fff}
+.portrait-panel .booking .barber-pole{display:none}
+.scroll-cue{margin-top:0}
+.photo-booking-pill .portrait-panel .booking{left:50%;right:auto;bottom:4px;width:280px;height:72px;padding:12px 22px;border-radius:40px;translate:-50% 0}
+.photo-booking-pill .portrait-panel .booking strong{font-size:21px;letter-spacing:.6px}
+.photo-booking-pill .portrait-panel .booking-caption{max-width:none;margin-top:5px;font-size:8px}
+@media(max-width:700px){.editorial-portrait{width:330px}.portrait-panel .booking{width:124px;height:124px;right:0;bottom:12px}.portrait-panel .booking strong{font-size:14px}.portrait-panel .booking-caption{font-size:7px;max-width:90px}.photo-booking-pill .portrait-panel .booking{width:270px;height:70px}.photo-booking-pill .portrait-panel .booking strong{font-size:20px}}
+@media(max-width:360px){.portrait-panel .booking{width:112px;height:112px}.portrait-panel .booking strong{font-size:13px}.photo-booking-pill .portrait-panel .booking{width:250px}}
+
+/* Invite a tap on the oval booking button without moving the layout. */
+@keyframes booking-invite{0%,62%,100%{box-shadow:0 0 0 0 #73b57800}70%{box-shadow:0 0 0 0 #73b57855}91%{box-shadow:0 0 0 12px #73b57800}}
+@keyframes booking-oval-sheen{0%,65%{transform:translateX(-170%);opacity:0}69%{opacity:1}90%{transform:translateX(170%);opacity:1}94%,100%{transform:translateX(170%);opacity:0}}
+.photo-booking-pill .portrait-panel .booking{animation:booking-invite 4.6s ease-out infinite;cursor:pointer;transition:transform .22s ease,background .22s ease,box-shadow .22s ease}
+.photo-booking-pill .portrait-panel .booking:before{display:block;content:"";position:absolute;inset:-30% 0;z-index:1;background:linear-gradient(110deg,transparent 32%,#ffffff30 50%,transparent 68%);pointer-events:none;animation:booking-oval-sheen 4.6s ease-in-out infinite}
+.photo-booking-pill .portrait-panel .booking>span:first-child{z-index:2}
+@media(hover:hover) and (pointer:fine){.photo-booking-pill .portrait-panel .booking:hover{animation:none;transform:scale(1.035);background:#65a76c;box-shadow:0 0 0 5px #73b57820}}
+.photo-booking-pill .portrait-panel .booking:active{animation:none;transform:scale(.97);background:#5d9c64}
+.photo-booking-pill .portrait-panel .booking:focus-visible{outline:3px solid #383c3a;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.photo-booking-pill .portrait-panel .booking,.photo-booking-pill .portrait-panel .booking:before{animation:none}.photo-booking-pill .portrait-panel .booking:before{display:none}.photo-booking-pill .portrait-panel .booking:hover,.photo-booking-pill .portrait-panel .booking:active{transform:none}}
+
+/* The selected round booking badge gently invites a tap. */
+.photo-booking-round .portrait-panel .booking{animation:booking-invite 4.6s ease-out infinite;cursor:pointer}
+@media(hover:hover) and (pointer:fine){.photo-booking-round .portrait-panel .booking:hover{animation:none;transform:scale(1.04);background:#65a76c}}
+.photo-booking-round .portrait-panel .booking:active{animation:none;transform:scale(.97);background:#5d9c64}
+@media(prefers-reduced-motion:reduce){.photo-booking-round .portrait-panel .booking{animation:none}.photo-booking-round .portrait-panel .booking:hover,.photo-booking-round .portrait-panel .booking:active{transform:none}}
+
+/* Keep the portrait still while the round booking badge responds. */
+.page:has(.booking:hover) .editorial-portrait,.page:has(.booking:active) .editorial-portrait,.page:has(.booking:focus-visible) .editorial-portrait{transform:none}
+@keyframes round-booking-breathe{0%,58%,100%{transform:scale(1)}68%{transform:scale(1.045)}80%{transform:scale(1)}88%{transform:scale(1.025)}}
+.photo-booking-round .portrait-panel .booking{animation:round-booking-breathe 4.6s ease-in-out infinite,booking-invite 4.6s ease-out infinite}
+@media(hover:hover) and (pointer:fine){.photo-booking-round .portrait-panel .booking:hover{animation:none;transform:scale(1.07);background:#65a76c}}
+.photo-booking-round .portrait-panel .booking:active{animation:none;transform:scale(.97)}
+.photo-booking-round .portrait-panel .booking:focus-visible{animation:none;outline:3px solid #383c3a;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.photo-booking-round .portrait-panel .booking{animation:none}.photo-booking-round .portrait-panel .booking:hover,.photo-booking-round .portrait-panel .booking:active{transform:none}}
+
+/* Animate only the halo; keep the booking lettering steady. */
+.photo-booking-round .portrait-panel .booking{animation:booking-invite 4.6s ease-out infinite}
+.photo-booking-round .portrait-panel .booking strong{font-size:21px;letter-spacing:1px}
+@media(max-width:700px){.photo-booking-round .portrait-panel .booking strong{font-size:19px}}
+@media(max-width:360px){.photo-booking-round .portrait-panel .booking strong{font-size:18px}}
+@media(hover:hover) and (pointer:fine){.photo-booking-round .portrait-panel .booking:hover{animation:none}}
+.photo-booking-round .portrait-panel .booking:active,.photo-booking-round .portrait-panel .booking:focus-visible{animation:none}
+@media(prefers-reduced-motion:reduce){.photo-booking-round .portrait-panel .booking{animation:none}}
+
+/* A silver-white highlight travels over the fixed booking lettering. */
+.photo-booking-round .portrait-panel .booking strong{color:#fff;background-image:linear-gradient(110deg,transparent 34%,#ffffff45 44%,#fff 50%,#ffffff45 56%,transparent 66%),linear-gradient(180deg,#ffffff 12%,#e2eee3 58%,#b9d1bc 100%);background-size:300% 100%,100% 100%;background-position:100% 0,0 0;background-repeat:no-repeat;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:lettering-shine 4.6s ease-in-out infinite;filter:none;text-shadow:none}
+@media(prefers-reduced-motion:reduce){.photo-booking-round .portrait-panel .booking strong{animation:none;background-position:0 0,0 0}}
+
+
+/* User-adjusted composition: preserve chosen scale, align photo and right edge. */
+.photo-booking-round:not(.layout-edit) .portrait-panel{aspect-ratio:1 / 1.138;min-height:0}
+.photo-booking-round:not(.layout-edit) .editorial-portrait{position:absolute;left:-5.8%;top:0;width:111.6%;max-width:none;height:auto;margin:0}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking{left:auto;right:0;top:61%;bottom:auto;width:37.3%;height:auto;aspect-ratio:1;min-height:0;padding:15px 10px}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{max-width:110px;font-size:8px}
+@media(max-width:360px){.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{font-size:7px;max-width:88px}}
+
+/* Shift the chosen composition together; scale lettering with the badge. */
+.photo-booking-round:not(.layout-edit) .portrait-panel{translate:-8px 0;container-type:inline-size}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-size:clamp(22px,6.5cqw,30px);letter-spacing:.7px}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{max-width:82%;font-size:clamp(8px,2.55cqw,11px);line-height:1.4;margin-top:7px}
+@media(max-width:360px){.photo-booking-round:not(.layout-edit) .portrait-panel{translate:-5px 0}.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-size:20px;letter-spacing:.4px}.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{font-size:8px;margin-top:5px;max-width:88%}}
