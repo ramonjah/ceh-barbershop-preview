@@ -43,3 +43,14 @@
  .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{transition:none}
  .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:hover,.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:active,.booking--modern:hover .booking-direction svg{transform:none}
 }
+
+/* Self-hosted Manrope keeps the site's Cyrillic typography consistent. */
+@font-face{font-family:"Manrope";src:url("assets/fonts/Manrope-Variable.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+body{font-family:"Manrope",Arial,sans-serif}
+.header-address{font-family:"Manrope",Arial,sans-serif;font-weight:500}
+.contact-phone strong{font-weight:600;letter-spacing:-.4px}
+.contact-address strong{font-weight:600}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-family:"Manrope",Arial,sans-serif;font-weight:800;font-size:21px;letter-spacing:.015em;line-height:1.15}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-family:"Manrope",Arial,sans-serif;font-weight:400;font-size:10px;letter-spacing:0;line-height:1.5}
+@media(max-width:700px){.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:19px;letter-spacing:.01em}}
+@media(max-width:360px){.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:18px}.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-size:9px}}
