@@ -373,9 +373,3 @@ body [class^="dikidi-"][class$="-modal"] [class$="-close"]:focus-visible{outline
 .photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-family:"Arial Black","Arial",sans-serif;font-weight:900;font-style:normal;font-size:clamp(23px,6.5cqw,30px);letter-spacing:.015em;line-height:1.05;transform:none;-webkit-text-stroke:.55px currentColor}
 @media(max-width:360px){.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-size:21px;letter-spacing:0;-webkit-text-stroke:.4px currentColor}}
 
-/* Real transparent lettering: the photo shows through holes in the label. */
-.photo-booking-round:not(.layout-edit) .portrait-panel .booking,.photo-booking-round:not(.layout-edit) .portrait-panel .booking:hover,.photo-booking-round:not(.layout-edit) .portrait-panel .booking:active{background:transparent;isolation:isolate}
-.photo-booking-round:not(.layout-edit) .portrait-panel .booking:before{display:block;content:"";position:absolute;inset:0;z-index:0;background:#73b578;mask:url("assets/booking-cutout-mask.svg?v=1") center/100% 100% no-repeat;-webkit-mask:url("assets/booking-cutout-mask.svg?v=1") center/100% 100% no-repeat;transform:none;animation:none;opacity:1;pointer-events:none}
-.photo-booking-round:not(.layout-edit) .portrait-panel .booking:hover:before{background:#65a76c}
-.photo-booking-round:not(.layout-edit) .portrait-panel .booking:active:before{background:#5d9c64}
-.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{opacity:0;animation:none}
