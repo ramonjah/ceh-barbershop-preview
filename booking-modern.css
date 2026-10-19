@@ -1,0 +1,45 @@
+/* Editorial booking control: charcoal brand color, clear type, one green accent. */
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{
+ width:56%;height:auto;min-height:86px;aspect-ratio:auto;top:70%;right:0;left:auto;bottom:auto;
+ display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0;padding:17px 15px 17px 20px;
+ clip-path:none;border-radius:18px;border:1px solid #ffffff16;background:#383c3a;color:#fff;
+ box-shadow:0 5px 16px #20282213;animation:none;overflow:hidden;isolation:isolate;
+ transition:background .22s ease,transform .22s ease,box-shadow .22s ease;
+}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern:before,
+.photo-booking-round:not(.layout-edit) .booking.booking--modern:after{display:none}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern>span:first-child{width:auto;min-width:0;flex:1;text-align:left;position:relative;z-index:1}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{
+ width:auto;max-width:none;margin:0;display:block;font-family:"Arial Black",Arial,Helvetica,sans-serif;font-size:21px;font-weight:900;
+ font-style:normal;line-height:1.12;letter-spacing:.025em;transform:none;color:#fff;background:none;
+ -webkit-text-fill-color:#fff;-webkit-text-stroke:0;filter:none;text-shadow:none;opacity:1;animation:none;
+}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{
+ max-width:none;margin:7px 0 0;font:10px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.1px;color:#d2d8d2;opacity:1;animation:none;
+}
+.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{
+ position:relative;z-index:1;display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#83bc86;color:#24382a;
+}
+.booking--modern .booking-direction svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+@media(hover:hover) and (pointer:fine){
+ .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:hover{background:#292f2c;transform:translateY(-2px);box-shadow:0 8px 20px #20282220;animation:none}
+ .booking--modern:hover .booking-direction svg{transform:translateX(3px)}
+}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:active{background:#252b28;transform:scale(.98);box-shadow:none}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:focus-visible{outline:3px solid #73b578;outline-offset:4px;transform:none}
+@media(max-width:700px){
+ .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{width:57%;min-height:80px;gap:10px;padding:14px 12px 14px 16px;border-radius:16px}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:19px;letter-spacing:.015em}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-size:10px;margin-top:6px}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{flex-basis:34px;width:34px;height:34px}
+}
+@media(max-width:360px){
+ .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{width:62%;padding:13px 11px 13px 14px;gap:8px}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:18px}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-size:9px}
+ .photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-direction{flex-basis:32px;width:32px;height:32px}
+}
+@media(prefers-reduced-motion:reduce){
+ .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{transition:none}
+ .photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:hover,.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern:active,.booking--modern:hover .booking-direction svg{transform:none}
+}
