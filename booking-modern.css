@@ -66,3 +66,5 @@ body{font-family:"Manrope",Arial,sans-serif}
 @keyframes booking-arrow-fly{from{transform:translateX(-38px)}to{transform:translateX(38px)}}
 .booking--modern .booking-direction svg,.booking--modern:hover .booking-direction svg{animation:booking-arrow-fly 1.4s linear infinite}
 @media(prefers-reduced-motion:reduce){.booking--modern .booking-direction svg,.booking--modern:hover .booking-direction svg{animation:none;transform:none}}
+
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking.booking--modern{top:73%}
