@@ -361,3 +361,10 @@ body [class^="dikidi-"][class$="-modal"] [class$="-close"]:focus-visible{outline
 
 /* Give the booking label a little more space below the portrait's faces. */
 .photo-booking-round:not(.layout-edit) .portrait-panel .booking{top:68%}
+
+/* A clear men's positioning and quieter typography, shared with the page. */
+.brand-statement{max-width:460px;margin:24px auto 7px;text-align:center;color:#383c3a;font:500 15px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.15px}
+.brand>.brand-statement+.station-board{margin-top:0;margin-bottom:12px;font-size:8px;letter-spacing:1px;color:#7b817b}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-style:normal;font-size:clamp(22px,6.1cqw,28px);line-height:1.1;letter-spacing:.12em;transform:none;-webkit-text-stroke:0}
+.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{font-family:Arial,Helvetica,sans-serif;font-size:clamp(10px,2.7cqw,12px);letter-spacing:.15px;line-height:1.45;margin-top:10px}
+@media(max-width:360px){.brand-statement{font-size:14px}.photo-booking-round:not(.layout-edit) .portrait-panel .booking strong{font-size:20px;letter-spacing:.09em}.photo-booking-round:not(.layout-edit) .portrait-panel .booking-caption{font-size:9px;margin-top:8px}}
