@@ -8,3 +8,9 @@
 .film-toggle:focus-visible{outline:2px solid white;outline-offset:3px}
 .video-study.photo-booking-round .portrait-panel .booking.booking--modern{top:auto;bottom:22px;right:22px;left:22px;width:auto;height:84px;box-sizing:border-box;border:1px solid #ffffff24;background:linear-gradient(135deg,#405a48f5,#2c4033f5);box-shadow:0 6px 24px #00000026}
 @media(max-width:420px){.video-study.photo-booking-round .portrait-panel .booking.booking--modern{left:16px;right:16px;bottom:16px;height:78px}.film-label{top:22px;left:20px}}
+
+/* Two clear lines use the full-width booking control. */
+.video-study.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:28px;line-height:1.1;letter-spacing:.01em}
+.video-study.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{display:block;white-space:nowrap;font-size:10px;line-height:1.5;margin-top:6px}
+@media(max-width:420px){.video-study.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:26px}}
+@media(max-width:360px){.video-study.photo-booking-round:not(.layout-edit) .booking.booking--modern strong{font-size:24px}.video-study.photo-booking-round:not(.layout-edit) .booking.booking--modern .booking-caption{font-size:9px}}
